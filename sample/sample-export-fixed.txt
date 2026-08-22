@@ -1,16 +1,15 @@
 Zotero-fixer APA Correction Log
-Applied 3 corrections across 1 entry (of 4 total).
-Only capitalization and DOI-URL formatting are corrected automatically.
-Missing data, incomplete dates, and suspicious authors still need manual
+Applied 2 corrections across 1 entry (of 4 total).
+Only container-title capitalization and DOI-URL formatting are corrected
+automatically. A work's own title is never auto-corrected -- sentence-casing
+it can silently lowercase real proper nouns (see the flagged report). That,
+missing data, incomplete dates, and suspicious authors still need manual
 attention -- see sample-export-flagged.txt.
 
 [1] Kuhn, Thomas S. (1962) -- The structure of scientific revolutions [book]
     no automatic corrections available
 
 [2] Smith, Jane Marie (2020) -- The Rise Of The Machines In Modern Manufacturing [article-journal]
-    FIXED title:
-        was: The Rise Of The Machines In Modern Manufacturing
-        now: The rise of the machines in modern manufacturing
     FIXED container title:
         was: journal of automation studies
         now: Journal of Automation Studies
