@@ -1,0 +1,36 @@
+[
+  {
+    "id": "kuhn1962",
+    "type": "book",
+    "title": "The structure of scientific revolutions",
+    "author": [{"family": "Kuhn", "given": "Thomas S."}],
+    "issued": {"date-parts": [[1962]]},
+    "publisher": "University of Chicago Press"
+  },
+  {
+    "id": "smith2020",
+    "type": "article-journal",
+    "title": "The Rise Of The Machines In Modern Manufacturing",
+    "container-title": "journal of automation studies",
+    "author": [{"family": "Smith", "given": "Jane Marie"}],
+    "issued": {"date-parts": [[2020, 5, 3]]},
+    "volume": "12",
+    "page": "45-67",
+    "DOI": "10.1000/xyz123"
+  },
+  {
+    "id": "who2019",
+    "type": "webpage",
+    "title": "Climate facts",
+    "author": [{"literal": "World Health Organization"}],
+    "issued": {"date-parts": [[2019]]},
+    "URL": "https://example.com/climate"
+  },
+  {
+    "id": "lee2021chapter",
+    "type": "chapter",
+    "title": "Recursion and its discontents",
+    "author": [{"family": "Lee", "given": "A."}],
+    "issued": {"date-parts": [[2021]]}
+  }
+]

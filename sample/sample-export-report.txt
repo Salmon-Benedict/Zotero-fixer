@@ -1,0 +1,35 @@
+Zotero-fixer APA Report
+Checked 4 entries -- 2 errors, 8 warnings, 2 notes, 0 clean entries
+
+[1] Kuhn, Thomas S. (1962) -- The structure of scientific revolutions [book]
+    NOTE     Author given name "Thomas S." will need to be reduced to initials (e.g. "T. S.") in the rendered APA citation.
+             APA 7th ed., Section 9.7 -- Author element: give initials, not full given names
+
+[2] Smith, Jane Marie (2020) -- The Rise Of The Machines In Modern Manufacturing [article-journal]
+    WARNING  Title "The Rise Of The Machines In Modern Manufacturing" looks title-cased; APA uses sentence case (capitalize only the first word, the first word after a colon/dash, and proper nouns).
+             APA 7th ed., Section 6.17 -- Capitalization: use sentence case for a work's own title
+    WARNING  Container title "journal of automation studies" looks sentence-cased; APA keeps periodical and book (container) titles in title case.
+             APA 7th ed., Section 6.17 -- Capitalization: use title case for periodical/book (container) titles
+    WARNING  DOI "10.1000/xyz123" should be formatted as a full URL, e.g. https://doi.org/10.1000/xyz123
+             APA 7th ed., Sections 9.16-9.17 -- Format DOIs as a full https://doi.org/... URL
+    WARNING  Volume is present but issue number is missing; include both when the journal paginates by issue.
+             APA 7th ed., Ch. 10.1 -- Periodical reference examples (volume, issue, pages)
+    NOTE     Author given name "Jane Marie" will need to be reduced to initials (e.g. "J. M.") in the rendered APA citation.
+             APA 7th ed., Section 9.7 -- Author element: give initials, not full given names
+
+[3] World Health Organization (2019) -- Climate facts [webpage]
+    WARNING  Missing recommended element: container title (journal/site/book name)
+             APA 7th ed., Ch. 9 (Sections 9.7-9.12) -- Reference Elements: Author, Date, Title, Source
+    WARNING  Only a year is present; APA wants (Year, Month Day) for this source type when the fuller date is available.
+             APA 7th ed., Section 9.8 -- Date element
+
+[4] Lee, A. (2021) -- Recursion and its discontents [chapter]
+    ERROR    Missing required element: container title (journal/site/book name)
+             APA 7th ed., Ch. 9 (Sections 9.7-9.12) -- Reference Elements: Author, Date, Title, Source
+    ERROR    Missing required element: page range
+             APA 7th ed., Ch. 9 (Sections 9.7-9.12) -- Reference Elements: Author, Date, Title, Source
+    WARNING  Missing recommended element: editor
+             APA 7th ed., Ch. 9 (Sections 9.7-9.12) -- Reference Elements: Author, Date, Title, Source
+    WARNING  Missing recommended element: publisher
+             APA 7th ed., Ch. 9 (Sections 9.7-9.12) -- Reference Elements: Author, Date, Title, Source
+
