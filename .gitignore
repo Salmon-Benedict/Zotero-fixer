@@ -1,7 +1,9 @@
 .DS_Store
 compiled/
 
-# Your real Zotero export and any report generated from it -- personal
+# Your real Zotero export and anything generated from it -- personal
 # reading-list data, not project source. Keep this local only.
 /My Library-Zotero.json
-/My Library-Zotero-report.txt
+/My Library-Zotero-flagged.txt
+/My Library-Zotero-fixed.txt
+/My Library-Zotero-zotero-import.json

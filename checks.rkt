@@ -5,7 +5,7 @@
 ;; where the number is the entry's 1-based position in the input file.
 
 (require racket/string racket/list
-         "csl-json.rkt" "apa-types.rkt" "issue.rkt")
+         "csl-json.rkt" "apa-types.rkt" "issue.rkt" "text-utils.rkt")
 
 (provide run-checks
          check-required-fields check-title-case check-container-case
@@ -43,51 +43,14 @@
                  (format "Missing recommended element: ~a" (field-label key))))))
 
 ;; ---------------------------------------------------------------------
-;; Capitalization heuristics
+;; Capitalization
 ;;
 ;; APA sentence-case titles capitalize only the first word, the first
 ;; word after a colon/dash, and proper nouns. APA title-case container
 ;; names (journals, books-as-containers) capitalize most content words.
-;; True proper-noun detection needs a dictionary we don't have, so these
-;; are heuristics: they look at words after the first one and flag when
-;; a large share of "long, non-stopword" tokens are capitalized (title
-;; case) vs. lowercase (sentence case). Good enough to flag for human
-;; review; not a silent auto-fixer.
-
-(define stopwords
-  '("a" "an" "the" "of" "in" "on" "and" "or" "but" "for" "nor" "to" "as"
-    "at" "by" "is" "with" "from" "vs" "vs."))
-
-(define (split-words s) (regexp-split #px"\\s+" (string-trim s)))
-(define (strip-punct w) (regexp-replace* #px"^[^A-Za-z0-9]+|[^A-Za-z0-9]+$" w ""))
-(define (stopword? w) (and (member (string-downcase (strip-punct w)) stopwords) #t))
-(define (long-word? w) (> (string-length (strip-punct w)) 3))
-
-(define (capitalized-word? w)
-  (define w2 (strip-punct w))
-  (and (> (string-length w2) 0) (char-upper-case? (string-ref w2 0))))
-
-(define (content-words words)
-  (for/list ([w (if (pair? words) (cdr words) '())]
-             #:unless (stopword? w)
-             #:when (long-word? w))
-    w))
-
-(define (looks-title-case? title)
-  (define words (split-words title))
-  (and (>= (length words) 3)
-       (let* ([candidates (content-words words)]
-              [offenders (filter capitalized-word? candidates)])
-         (and (>= (length candidates) 2)
-              (> (length offenders) (/ (length candidates) 2))))))
-
-(define (looks-sentence-case? title)
-  (define words (split-words title))
-  (and (>= (length words) 2)
-       (let* ([candidates (content-words words)]
-              [lowered (filter (lambda (w) (not (capitalized-word? w))) candidates)])
-         (and (>= (length candidates) 2)
-              (> (length lowered) (/ (length candidates) 2))))))
+;; looks-title-case?/looks-sentence-case? (text-utils.rkt) are heuristic
+;; detectors -- good enough to flag for human review, not a silent
+;; auto-fixer; see corrections.rkt for the actual rewriting.
 
 (define (check-title-case e idx)
   (define t (entry-title e))

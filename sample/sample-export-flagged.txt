@@ -2,7 +2,7 @@ Zotero-fixer APA Report
 Checked 4 entries -- 2 errors, 8 warnings, 2 notes, 0 clean entries
 
 [1] Kuhn, Thomas S. (1962) -- The structure of scientific revolutions [book]
-    NOTE     Author given name "Thomas S." will need to be reduced to initials (e.g. "T. S.") in the rendered APA citation.
+    NOTE     1 author given name will need to be reduced to initials in the rendered APA citation: "Thomas S." -> "T. S.".
              APA 7th ed., Section 9.7 -- Author element: give initials, not full given names
 
 [2] Smith, Jane Marie (2020) -- The Rise Of The Machines In Modern Manufacturing [article-journal]
@@ -14,7 +14,7 @@ Checked 4 entries -- 2 errors, 8 warnings, 2 notes, 0 clean entries
              APA 7th ed., Sections 9.16-9.17 -- Format DOIs as a full https://doi.org/... URL
     WARNING  Volume is present but issue number is missing; include both when the journal paginates by issue.
              APA 7th ed., Ch. 10.1 -- Periodical reference examples (volume, issue, pages)
-    NOTE     Author given name "Jane Marie" will need to be reduced to initials (e.g. "J. M.") in the rendered APA citation.
+    NOTE     1 author given name will need to be reduced to initials in the rendered APA citation: "Jane Marie" -> "J. M.".
              APA 7th ed., Section 9.7 -- Author element: give initials, not full given names
 
 [3] World Health Organization (2019) -- Climate facts [webpage]
